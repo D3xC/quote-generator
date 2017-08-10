@@ -1,0 +1,44 @@
+{
+  "name": "quote-generator",
+  "version": "1.0.0",
+  "description": "freeCodeCamp Random Quote Machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && lite-server",
+    "clean": "rimraf dist",
+    "wpbuild": "npm run clean && webpack && lite-server",
+    "build": "npm run clean && mkdir dist && npm run build:html && npm run build:css && npm run build:js",
+    "build:css": "node-sass --include-path scss -w src/styles.scss dist/styles.css",
+    "build:html": "copy src\\index.html dist\\index.html",
+    "build:js": "browserify src/index.js -o dist/bundle.js -t [ babelify --presets [ es2015 ] ]",
+    "minify:js": "uglifyjs dist/bundle.js -o dist/bundle.js",
+    "serve": "lite-server"
+  },
+  "author": "Dexter Campbell",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "lite-server": "^2.3.0",
+    "node-sass": "^4.5.2",
+    "postbuild": "^2.0.0",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "uglify-js": "^2.8.22",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
+  }
+}

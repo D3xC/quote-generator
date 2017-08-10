@@ -1,0 +1,24 @@
+body {
+  background-color: #ffe0b2; }
+
+.card-title {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  text-shadow: 1px 2px #1e88e5; }
+
+.quote {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 20px;
+  padding-right: 7px;
+  font-family: 'Space Mono', monospace;
+  font-size: 24px; }
+
+.author {
+  font-family: 'Satisfy', 'cursive';
+  font-size: 24px;
+  font-style: italic; }
+
+h2 {
+  font-family: 'Stalemate', 'cursive';
+  font-size: 72px; }

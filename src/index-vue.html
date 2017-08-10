@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>My App</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Pacifico|Satisfy|Space Mono|Material+Icons'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<html lang="en">
+
+<body>
+  <div id="app" class="container">
+    <header>
+      <h2 class="center-align orange-text text-darken-4">Wisdom of the Ages</h2>
+    </header>
+    <div class="row">
+      <div class="col s12 m6 offset-m3">
+        <div class="card light-blue darken-3 z-depth-3">
+          <div class="card-content white-text">
+            <span class="card-title blue-text text-lighten-3">Random Quote Generator</span>
+            <div class="quote"><i class="fa fa-quote-left"></i>&nbsp&nbsp{{quote}}&nbsp&nbsp<i class="fa fa-quote-right"></i></div>
+            <p class="right-align">-- <span class="author">{{author}}</span></p>
+          </div>
+          <div class="card-action">
+            <a @click="getQuote()" href="#" class="waves-effect waves-dark btn orange darken-3 new-quote orange-text text-lighten-3">New Quote</a>
+            <a @click="" href="#" class="waves-effect waves-dark btn orange darken-3 new-quote orange-text text-lighten-3">Tweet this</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/index.js"></script>
+</body>
+
+</html>
